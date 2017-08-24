@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 10px;
+}
+/*---------------------------input输入框------------------------------*/
+.input-text-box{
+    width: 30rem;
+    height: 3rem;
+    padding: .2rem .5rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 0.1rem;
+    outline: #66afe9;
+}
+.input-text-box:focus{
+    border:1px solid #66afe9;
+    box-shadow: 0 0.05rem 0.2rem rgba(102,175,223,0.3);
+    transition-duration:0.2s;
+}
+/*-----------------------button按钮(颜色)---------------------------*/
+.btn-set-color{
+    padding:0.6em 1.6em;
+    font-size: 1rem;
+    line-height: 1.5em;
+    color:white;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+    background:#58a linear-gradient(hsla(0,0%,100%,0.2),transparent);
+    border:1px solid  rgba(0,0,0,0.1);
+    border-radius: 0.5em;
+    box-shadow: 0 0.1em 0.4em rgba(0,0,0,0.5);
+    outline:none;
+}
+/*.btn-set-color{*/
+    /*font-size:3rem;*/
+    /*background-color: pink;*/
+/*}*/
+/*.btn-set-color:hover{*/
+    /*background: #5588aa linear-gradient(hsla(0,0%,100%,0.3),transparent);*/
+/*}*/
+/*-----------------------button按钮（许多个）---------------------------*/
+.btn-set-many{
+    display: inline-block;
+    margin-top: 15px;
+    letter-spacing: -3px;
+}
+.btn-set-many .btn{
+    padding: 0.5em 0.75em;
+    font-size: 1rem;
+    line-height: 1em;
+    color: #333;
+    text-align: center;
+    background: white;
+    border-radius: 0.3em;
+    border: 1px solid #999;
+
+}
+/*-----更改按钮背景颜色-----*/
+/*.btn-set-many .btn{*/
+    /*background: red;*/
+/*}*/
+/*.btn-set-many .btn:hover{*/
+    /*background: rgba(255,0,0,0.1);*/
+/*}*/
+.btn-set-many>.btn:not(:first-child):not(:last-child){
+    margin-right: -1px;
+    border-radius: 0;
+}
+.btn-set-many>.btn:nth-child(1){
+    border-radius: 0.3em;
+}
+.btn-set-many>.btn:first-child{
+    margin-right: -1px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.btn-set-many>.btn:last-child{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.btn-set-many>.btn:first-child:last-child{
+    border-radius: 6px;
+}
+
+/*-------------------------复选框------------------------*/
+/*.awesome + label::before{*/
+.customize-checkbox + label::before{
+    display: inline-block;
+    content: '\a0';
+    vertical-align: middle;
+    width: .8em;
+    height: .8em;
+    margin-right: .2em;
+    border:1px solid rgba(0,0,0,.2);
+    border-radius: .2em;
+    background: #e7e7e7;
+    text-indent: .15em;
+    line-height: .65;
+}
+.customize-checkbox:checked+label::before{
+    content:'\2713';
+    background: rgba(150, 197, 47, 0.49);
+}
+.customize-checkbox{
+    position:absolute;
+    clip:rect(0,0,0,0);
+}
+/*---------------------------单选----------------------------*/
+input[type="radio"] + label::before{
+    display: inline-block;
+    content: '\a0';
+    width: 0.8em;
+    height: 0.8em;
+    margin: 0 .2em .2rem 0;
+    border:1px solid rgba(0,0,0,.2);
+    border-radius: 50%;
+    background: #CCCCCC;
+    vertical-align:middle;
+}
+input[type="radio"]:checked + label::before{
+    content:'\2022';
+    color: #666;
+    background: rgba(150, 197, 47, 0.49);
+}
+input[type="radio"]{
+    position:absolute;
+    clip:rect(0,0,0,0);
+}
+/*--------------------------下拉框-----------------------------*/
+select{
+    padding: 0.5rem 2rem 1rem;
+    font-size: 2rem;
+    background: peachpuff;
+    border-radius: 0.3rem;
+}
+option{
+    border-radius: 0.3rem;
+}
+/*-----------------------div下拉框-----------------------*/
+.dropdown{
+    position:relative;
+    height: 220px;
+}
+.dropdown-toggle{
+    display: inline-block;
+    position: relative;
+    padding: 0.5rem 1.5rem 1rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    background: rgba(255,255,255,1);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 0.3rem;
+}
+.dropdown-toggle:hover{
+    background: #ebebeb;
+    cursor: pointer;
+}
+.dropdown-toggle .caret{
+    display: inline-block;
+    margin-top: 0.5rem;
+    line-height: 1.5rem;
+    border: 0;
+    border-top: 5px solid rgba(0,0,0,0.8);
+    border-right:5px solid transparent;
+    border-left:5px solid transparent;
+}
+.dropdown-menu{
+    position:absolute;
+    top: 3.3rem;
+    left: 0;
+    overflow: hidden;
+    display: inline-block;
+    list-style: none;
+    padding: 0.5rem 0 0.5rem;
+    background: rgba(255,255,255,1);
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.5);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 0.3rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+/*------------分割线------------*/
+.dropdown-menu li.dividing-line{
+    margin: 0.5rem 0;
+    border-top: 1px solid #666;
+}
+.dropdown-menu li a{
+    display: inline-block;
+    width: 100%;
+    padding: 0 1.5rem 0;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    color: #333333;
+}
+.dropdown-menu li a:hover{
+    background: rgba(0,0,0,0.05);
+}
+.dropdown-menu li a{
+    color: #333;
+    text-decoration: none;
+    text-align: left;
+}
+/*--------------------数量的加减(经典)-------------------*/
+.quantity-add-less-classic{
+    display: inline-block;
+    background: #dddddd;
+    border:1px solid #999;
+}
+.quantity-add-less-classic .less,.quantity-add-less-classic .add{
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+    text-align: center;
+    line-height: 100%;
+    border: none;
+    outline: none;
+}
+.quantity-add-less-classic .quantity-input-num{
+    width:5rem;
+    height: 2rem;
+    margin: 0 -3px;
+    padding: 0;
+    border: 0;
+    text-align: center;
+    outline: none;
+}
+/*--------------------数量的加减（分离）-------------------*/
+.quantity-add-less-Separation{
+    display: inline-block;
+    overflow: hidden;
+}
+.quantity-add-less-Separation .quantity-input-num{
+    float: left;
+    width:4rem;
+    height: 3rem;
+    margin-right: 3px;
+    padding: 0;
+    text-align: center;
+    border: 1px solid #999;
+    outline: none;
+}
+.quantity-add-less-Separation .add-less {
+    float: left;
+}
+.quantity-add-less-Separation .add-less .less,.quantity-add-less-Separation .add-less .add{
+    display: block;
+    width: 2rem;
+    height: 1.5rem;
+    margin: 0;
+    text-align: center;
+    line-height: 100%;
+    background: #fff;
+    border: 1px solid #999;
+    outline: none;
+}
+.quantity-add-less-Separation .add-less .add{
+    margin-bottom: 2px;
+}
+/*--------------------数量的加减（间隔）-------------------*/
+.quantity-add-less-spacing{
+    border: 1px solid#999;
+}
+.quantity-add-less-spacing .quantity-input-num{
+    border:0;
+}
+.quantity-add-less-spacing .add-less .add,.quantity-add-less-spacing .add-less .less {
+    border: 0;
+}
+.quantity-add-less-spacing .add-less .add{
+    margin-bottom: 1px ;
+    border-bottom: 1px solid #999;
+}
+.quantity-add-less-spacing .add-less{
+    border-left: 1px solid #999;
+}
+
+
+
+
+
+
+
+
+
